@@ -25,7 +25,7 @@ const rooms = new Map<string, RoomData>();
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
   const httpServer = createServer(app);
   const io = new Server(httpServer, {
     cors: {
@@ -295,7 +295,7 @@ async function startServer() {
     });
   }
 
-  httpServer.listen(PORT, "0.0.0.0", () => {
+  httpServer.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }
