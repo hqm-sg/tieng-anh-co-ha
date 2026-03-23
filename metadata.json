@@ -1,0 +1,9 @@
+{
+  "name": "Tiếng Anh Cô Hà",
+  "description": "Lớp tiếng anh cô Hà.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "display-capture"
+  ]
+}
